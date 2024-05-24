@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the #{title}
+  p: a(href='/new') Post a message
+  each message in messages 
+    div= message.user + ' said:'
+    div= message.text 
+    div= 'Shared at: ' + message.added
+    br

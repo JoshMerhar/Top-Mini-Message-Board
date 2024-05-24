@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1= title
+  form(method='POST' action='/new')
+    label(for='username') Username: 
+    input(type='text' name='username' minLength=1 maxLength=50 required)
+    br
+    label(for='message') Message: 
+    input(type='text' name='message' minLength=1 maxLength=50 required)
+    br
+    button(type='submit' name='submit') Submit
+  p: a(href='/') Return Home
